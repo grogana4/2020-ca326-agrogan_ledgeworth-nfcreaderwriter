@@ -178,6 +178,7 @@ The system will be composed of
 The GUI layer displaying the user information, like contacts and options in app, displayed by the android XML
 The NFC layer, which is used to read and write information from these cards to the phione and vice versa. This will utilise the NFC package stored in the android library.
 The back-end layer, which is the main process of utilising both layers to do their respective jobs, which is coded in java. 
+
 ![](./Sys_architecture.png)
 
 
