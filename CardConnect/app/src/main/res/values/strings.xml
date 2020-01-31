@@ -8,5 +8,16 @@
     <string name="message_write_tag">Write to NFC Tag</string>
     <string name="message_tap_tag">Tap the NFC Tag to your device !</string>
     <string name="hint_message">Message</string>
+
+
+
     <string name="message_profile">Edit your Profile</string>
+    <string name="message_name">Full name</string>
+    <string name="message_number">Phone Number</string>
+    <string name="message_email">email (example@gmail.com)</string>
+    <string name="message_address">full address</string>
+    <string name="message_contacts">Contacts</string>
+    <string name="message_save">Save Profile</string>
+
+
 </resources>

@@ -1,4 +1,4 @@
-#Thu Jan 30 15:57:39 GMT 2020
+#Fri Jan 31 14:57:26 GMT 2020
 base.0=/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/transforms/dexMerger/debug/10
 path.0=classes.dex
 renamed.0=classes.dex

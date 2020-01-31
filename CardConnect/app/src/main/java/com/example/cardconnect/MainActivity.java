@@ -1,5 +1,6 @@
 package com.example.cardconnect;
 
+
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -10,17 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements Listener{
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    private EditText mEtMessage;
     private Button mBtWrite;
     private Button mBtRead;
     private Button Profile;
+    private Button Contacts;
     private NfcWriteFragment mNfcWriteFragment;
     private NfcReadFragment mNfcReadFragment;
 
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity implements Listener{
 
     private void initViews() {
 
-        mEtMessage = (EditText) findViewById(R.id.et_message);
         mBtWrite = (Button) findViewById(R.id.btn_write);
         mBtRead = (Button) findViewById(R.id.btn_read);
         Profile = (Button) findViewById(R.id.btn_profile);
-
+        Contacts = (Button) findViewById(R.id.btn_contacts);
         mBtWrite.setOnClickListener(view -> showWriteFragment());
         mBtRead.setOnClickListener(view -> showReadFragment());
+        Profile.setOnClickListener(view -> showProfileFragment());
 
     }
 
@@ -79,6 +79,13 @@ public class MainActivity extends AppCompatActivity implements Listener{
             mNfcReadFragment = NfcReadFragment.newInstance();
         }
         mNfcReadFragment.show(getFragmentManager(),NfcReadFragment.TAG);
+
+    }
+
+    private void showProfileFragment() {
+
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
 
     }
 
@@ -131,9 +138,9 @@ public class MainActivity extends AppCompatActivity implements Listener{
 
                 if (isWrite) {
 
-                    String messageToWrite = mEtMessage.getText().toString();
+                   // String messageToWrite = mEtMessage.getText().toString();
                     mNfcWriteFragment = (NfcWriteFragment) getFragmentManager().findFragmentByTag(NfcWriteFragment.TAG);
-                    mNfcWriteFragment.onNfcDetected(ndef,messageToWrite);
+                   // mNfcWriteFragment.onNfcDetected(ndef,messageToWrite);
 
                 } else {
 

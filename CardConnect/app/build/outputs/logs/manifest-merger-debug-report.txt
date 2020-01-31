@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
 MERGED from [com.android.support:design:27.1.1] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/06660b183c18fb9d630915b4bc3ddd49/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/f2547ba0bcfded55a2e7f6d33aba90d6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/6366d1c37814db7154bf5d65b6381c4d/AndroidManifest.xml:2:1-11:12
@@ -21,20 +21,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/lukeabe/.gradle/c
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/90df5b07079f6e95cb48e67d6b98caaa/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/3c169d31e4d3dd75ce05a68bb08a1f62/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/28b8fe47c5c9de2b5862a35e06ea9940/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:3:11-44
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
-		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
-		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-28:12
+		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:1-38:12
 		INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:2:11-69
@@ -49,7 +49,7 @@ ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidM
 	android:name
 		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:6:19-54
 application
-ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:7:5-24:19
+ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:7:5-34:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/6366d1c37814db7154bf5d65b6381c4d/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/lukeabe/.gradle/caches/transforms-2/files-2.1/6366d1c37814db7154bf5d65b6381c4d/AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -82,6 +82,14 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:21:17-76
 	android:name
 		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:21:27-74
+activity#com.example.cardconnect.Profile
+ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:24:9-33:20
+	android:label
+		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:26:13-52
+	android:theme
+		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml:25:13-36
 uses-sdk
 INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/lukeabe/Downloads/CardConnect/CardConnect/app/src/main/AndroidManifest.xml

@@ -6,58 +6,58 @@
     density="420dpi"
     format="10"
     plugin-version="3.4.2"
-    timestamp="1580399854581"
+    timestamp="1580486693636"
     token="-8042086793725300213"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="321" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="156" />
+        duration="0" />
     <task
         name="verifier"
-        duration="124" />
+        duration="0" />
 
     <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
         location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
     <artifact
         location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -65,43 +65,43 @@
 
     <build
         build-mode="FULL"
-        timestamp="1580399854581"
+        timestamp="1580486693636"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
