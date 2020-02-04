@@ -25,8 +25,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity
             android:name="com.example.cardconnect.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +35,39 @@
         <activity
             android:name="com.example.cardconnect.Profile"
             android:label="@string/message_profile"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:parentActivityName="com.example.cardconnect.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.cardconnect.Contacts"
+            android:label="@string/message_contacts"
+            android:parentActivityName="com.example.cardconnect.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.cardconnect.viewContacts"
+            android:label="@string/message_view_contacts"
+            android:parentActivityName="com.example.cardconnect.Contacts" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Contacts" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +75,11 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.cardconnect.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.example.cardconnect.com.android.tools.ir.server.InstantRunContentProvider"

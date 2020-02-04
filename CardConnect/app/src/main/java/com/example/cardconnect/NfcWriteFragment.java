@@ -41,7 +41,6 @@ public class NfcWriteFragment extends DialogFragment {
     private void initViews(View view) {
 
         mTvMessage = (TextView) view.findViewById(R.id.tv_message);
-        mProgress = (ProgressBar) view.findViewById(R.id.progress);
     }
 
     @Override
@@ -59,7 +58,6 @@ public class NfcWriteFragment extends DialogFragment {
 
     public void onNfcDetected(Ndef ndef, String messageToWrite){
 
-        mProgress.setVisibility(View.VISIBLE);
         writeToNfc(ndef,messageToWrite);
     }
 
@@ -80,8 +78,6 @@ public class NfcWriteFragment extends DialogFragment {
                 e.printStackTrace();
                 mTvMessage.setText(getString(R.string.message_write_error));
 
-            } finally {
-                mProgress.setVisibility(View.GONE);
             }
 
         }

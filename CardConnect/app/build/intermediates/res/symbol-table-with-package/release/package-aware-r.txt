@@ -660,6 +660,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen message_margin
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -790,6 +791,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round_button
+drawable round_rect_button
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -809,6 +812,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_favorite
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -819,7 +823,9 @@ id action_text
 id actions
 id activity_chooser_view_content
 id activity_main
+id activity_profile
 id add
+id address_message
 id alertTitle
 id all
 id always
@@ -829,7 +835,13 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_contacts
+id btn_delete
+id btn_edit
+id btn_profile
 id btn_read
+id btn_save
+id btn_save_contact
 id btn_write
 id buttonPanel
 id cancel_action
@@ -858,11 +870,11 @@ id dimensions
 id direct
 id disableHome
 id edit_query
+id email_message
 id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id et_message
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -890,6 +902,7 @@ id line1
 id line3
 id listMode
 id list_item
+id list_view
 id logo
 id masked
 id media_actions
@@ -897,6 +910,8 @@ id message
 id middle
 id mini
 id multiply
+id my_toolbar
+id name_message
 id navigation_header_container
 id never
 id none
@@ -910,6 +925,7 @@ id parent
 id parentPanel
 id parent_matrix
 id percent
+id phone_message
 id pin
 id progress
 id progress_circular
@@ -1025,7 +1041,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_contacts
 layout activity_main
+layout activity_profile
+layout activity_view_contact
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1061,6 +1080,8 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout toolbar
+menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -1097,7 +1118,18 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_pattern
 string hint_message
+string message_address
+string message_contacts
+string message_delete
+string message_edit
+string message_email
+string message_name
+string message_number
+string message_profile
 string message_read_tag
+string message_save
+string message_save_contact
+string message_settings
 string message_tag_detected
 string message_tap_tag
 string message_write_error
