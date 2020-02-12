@@ -13,21 +13,21 @@
 
 
     <Button
-        android:id="@+id/btn_save_contact"
+        android:id="@+id/btn_export_contact"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/contact_info"
         android:layout_marginTop="104dp"
         android:layout_marginLeft="40dp"
-        android:text="@string/message_save_contact" />
+        android:text="@string/message_export_contact" />
 
     <Button
         android:id="@+id/btn_edit"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_save_contact"
+        android:layout_below="@+id/btn_export_contact"
         android:layout_marginTop="-48dp"
         android:layout_marginLeft="155dp"
         android:text="@string/message_edit" />
@@ -44,11 +44,13 @@
 
     <TextView
         android:id="@+id/contact_info"
-        android:layout_width="110dp"
-        android:layout_marginLeft="150dp"
+        android:layout_width="249dp"
+        android:layout_height="213dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="150dp"
-        android:height="150dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="20sp"
+        />
 
 
 </RelativeLayout>

@@ -21,7 +21,7 @@
     <string name="message_settings">Settings</string>
 
 
-    <string name="message_save_contact">Save</string>
+    <string name="message_export_contact">Export</string>
     <string name="message_edit">Edit</string>
     <string name="message_delete">Delete</string>
     <string name="message_ViewAll">View All</string>

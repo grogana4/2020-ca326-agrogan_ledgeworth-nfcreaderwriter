@@ -17,7 +17,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.example.cardconnect.DatabaseHelper;
 
 public class Contacts extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class Contacts extends AppCompatActivity {
     List<String> list = new ArrayList<String>();
     ArrayAdapter adapter;
     private Button Delete;
-    private static String ID;
+    private String identifier;
 
 
 
@@ -38,8 +38,11 @@ public class Contacts extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         appDb = new DatabaseHelper(this);
-        appDb.insertData("paul", "0831234567", "Hello@iol.ie", "123 jeff lane");
+        //appDb.insertData("mike", "0831234567", "Hello@iol.ie", "123 jeff lane");
+        //appDb.insertData("luke", "0831233986", "Hey@iol.ie", "123 jeff lane");
+        //appDb.insertData("Gabe Newell", "0831232106778", "aManHasFallenIntoTheRiver@iol.ie", "Lego City");
 
 
         ViewAll();
@@ -52,9 +55,12 @@ public class Contacts extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String ID = listView.getItemAtPosition(position).toString();
+
+                identifier = String.valueOf(position+1);
+
+
                 Intent intent = new Intent(Contacts.this, viewContacts.class);
-                intent.putExtra("MyID", ID);
+                intent.putExtra("MyID", identifier);
                 startActivity(intent);
             }
         });

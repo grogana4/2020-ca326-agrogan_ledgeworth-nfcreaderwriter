@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
+import android.view.View;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "contacts.db";
@@ -52,16 +54,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-    public Cursor getNameData(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select Name from " + TABLE_NAME, null) ;
-        return res;
+
+
+    public String getContactData(String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ID = " + id, null ) ;
+        res.moveToFirst();
+        if (res != null) {
+            StringBuffer buffer = new StringBuffer();
+            buffer.append("Name: " + res.getString(1)+ "\n");
+            buffer.append("Phone: " + res.getString(2)+ "\n");
+            buffer.append("Email: " + res.getString(3)+ "\n");
+            buffer.append("Address: " + res.getString(4)+ "\n");
+            String contactid =  buffer.toString();
+            return contactid;
+        }
+        return id;
     }
 
-    public Cursor getContactData(String id){
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + Col_1 + "=" + id, null ) ;
-        return res;
+    public String getCsvData(String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ID = " + id, null ) ;
+        res.moveToFirst();
+        if (res != null) {
+            StringBuffer buffer = new StringBuffer();
+            buffer.append(res.getString(1)+ ",");
+            buffer.append(res.getString(2)+ ",");
+            buffer.append(res.getString(3)+ ",");
+            buffer.append(res.getString(4)+ ",");
+            String csvid =  buffer.toString();
+            return csvid;
+        }
+        return id;
     }
 }

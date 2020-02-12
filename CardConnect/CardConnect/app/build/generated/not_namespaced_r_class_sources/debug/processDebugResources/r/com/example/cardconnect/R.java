@@ -2034,7 +2034,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -3680,10 +3680,10 @@ public final class R {
     public static final int btn_contacts=0x7f080028;
     public static final int btn_delete=0x7f080029;
     public static final int btn_edit=0x7f08002a;
-    public static final int btn_profile=0x7f08002b;
-    public static final int btn_read=0x7f08002c;
-    public static final int btn_save=0x7f08002d;
-    public static final int btn_save_contact=0x7f08002e;
+    public static final int btn_export_contact=0x7f08002b;
+    public static final int btn_profile=0x7f08002c;
+    public static final int btn_read=0x7f08002d;
+    public static final int btn_save=0x7f08002e;
     public static final int btn_write=0x7f08002f;
     public static final int buttonPanel=0x7f080030;
     public static final int cancel_action=0x7f080031;
@@ -3977,12 +3977,12 @@ public final class R {
     public static final int message_delete=0x7f0d0025;
     public static final int message_edit=0x7f0d0026;
     public static final int message_email=0x7f0d0027;
-    public static final int message_name=0x7f0d0028;
-    public static final int message_number=0x7f0d0029;
-    public static final int message_profile=0x7f0d002a;
-    public static final int message_read_tag=0x7f0d002b;
-    public static final int message_save=0x7f0d002c;
-    public static final int message_save_contact=0x7f0d002d;
+    public static final int message_export_contact=0x7f0d0028;
+    public static final int message_name=0x7f0d0029;
+    public static final int message_number=0x7f0d002a;
+    public static final int message_profile=0x7f0d002b;
+    public static final int message_read_tag=0x7f0d002c;
+    public static final int message_save=0x7f0d002d;
     public static final int message_settings=0x7f0d002e;
     public static final int message_tag_detected=0x7f0d002f;
     public static final int message_tap_tag=0x7f0d0030;
@@ -9101,7 +9101,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

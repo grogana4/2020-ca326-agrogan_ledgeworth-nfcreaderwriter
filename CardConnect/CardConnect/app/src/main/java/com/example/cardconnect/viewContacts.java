@@ -1,7 +1,10 @@
 package com.example.cardconnect;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -11,17 +14,20 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.provider.ContactsContract;
+
+import java.io.File;
+import java.io.FileOutputStream;
 
 
 public class viewContacts extends AppCompatActivity {
 
-    DatabaseHelper appDb;
     private TextView contactInfo;
+    private DatabaseHelper appDb;
 
-    private Button Save_to_contacts;
+    private Button export_to_contacts;
     private Button Edit;
     private Button Delete;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +35,8 @@ public class viewContacts extends AppCompatActivity {
         setContentView(R.layout.activity_view_contact);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-
         appDb = new DatabaseHelper(this);
 
-        Intent intent = getIntent();
-        String id = intent.getStringExtra("MyID");
 
         initViews();
     }
@@ -64,35 +67,34 @@ public class viewContacts extends AppCompatActivity {
 
     private void initViews() {
 
-        Save_to_contacts = (Button) findViewById(R.id.btn_save_contact);
+        export_to_contacts = (Button) findViewById(R.id.btn_export_contact);
         Edit = (Button) findViewById(R.id.btn_edit);
         Delete = (Button) findViewById(R.id.btn_delete);
-        contactInfo = (TextView) findViewById(R.id.contact_info);
+        TextView contactInfo = (TextView) findViewById(R.id.contact_info);
+        Intent intent = getIntent();
+        //contactInfo.setText(appDb);
+        if(intent.getStringExtra("MyID") != null){
+            String contact = appDb.getContactData(intent.getStringExtra("MyID"));
+            contactInfo.setText(contact);
+        }
 
+        //if(getIntent().getExtras()!= null){
+        //    Toast.makeText(getApplicationContext(), "nothing in extras", Toast.LENGTH_LONG).show();
+        //}
 
-
-        //contactInfo = appDb.
-
-
-        //Save_to_contacts.setOnClickListener(view -> contactSaveFragment());
+        export_to_contacts.setOnClickListener(view -> exportContact(intent.getStringExtra("MyID")));
         //Edit.setOnClickListener(view -> contactEditFragment());
         // Delete.setOnClickListener(view -> contactDeleteFragment());
 
     }
 
 
-//private void contactSaveFragment() {
+    public void exportContact(String csvId){
+        String csvContact = appDb.getCsvData(csvId);
 
+        Intent intent = new Intent(Intent.ACTION_INSERT,
+                ContactsContract.Contacts.CONTENT_URI);
+        startActivity(intent);
+    }
 
-// }
-
-//private void contactEditFragment() {
-
-
-//}
-
-//private void contactDeleteFragment() {
-
-
-//}
 }

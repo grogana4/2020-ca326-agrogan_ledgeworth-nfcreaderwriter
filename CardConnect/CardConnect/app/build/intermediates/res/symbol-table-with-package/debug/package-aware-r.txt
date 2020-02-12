@@ -838,10 +838,10 @@ id bottom
 id btn_contacts
 id btn_delete
 id btn_edit
+id btn_export_contact
 id btn_profile
 id btn_read
 id btn_save
-id btn_save_contact
 id btn_write
 id buttonPanel
 id cancel_action
@@ -1125,12 +1125,12 @@ string message_contacts
 string message_delete
 string message_edit
 string message_email
+string message_export_contact
 string message_name
 string message_number
 string message_profile
 string message_read_tag
 string message_save
-string message_save_contact
 string message_settings
 string message_tag_detected
 string message_tap_tag
