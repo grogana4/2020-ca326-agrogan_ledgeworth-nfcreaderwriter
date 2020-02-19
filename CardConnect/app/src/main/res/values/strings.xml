@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">CardConnect</string>
+    <string name="message_write_error">Error Writing Message !</string>
+    <string name="message_write_success">Successfully written to Tag !</string>
+    <string name="message_write_progress">Writing to Tag..</string>
+    <string name="message_tag_detected">NFC Tag Detected !</string>
+    <string name="message_read_tag">Read from NFC Tag</string>
+    <string name="message_write_tag">Write to NFC Tag</string>
+    <string name="message_tap_tag">Tap the NFC Tag to your device !</string>
+    <string name="hint_message">Message</string>
+
+
+
+    <string name="message_profile">Edit your Profile</string>
+    <string name="message_name">Full name*</string>
+    <string name="message_number">Phone Number*</string>
+    <string name="message_email">email (example@gmail.com)</string>
+    <string name="message_org">Organisation/Company</string>
+    <string name="message_pos">Company Position</string>
+    <string name="message_website">Website URL</string>
+    <string name="message_notes">Additional notes</string>
+    <string name="message_address">full address</string>
+    <string name="message_contacts">Contacts</string>
+    <string name="message_save">Save Profile</string>
+    <string name="message_settings">Settings</string>
+
+
+    <string name="message_export_contact">Export</string>
+    <string name="message_edit">Edit</string>
+    <string name="message_delete">Delete</string>
+    <string name="message_ViewAll">View All</string>
+
+    <string name="message_view_contacts">Contact View</string>
+
+    <string name="message_saveContact">Save Contact</string>
+
+
+</resources>
