@@ -59,7 +59,8 @@ public class Contacts extends AppCompatActivity{ //Contacts starts up if Contact
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_favorite) { //if manual is clicked, the manual page will appear
-            Toast.makeText(this, "Manual clicked", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, Manual.class);
+            startActivity(intent);
             return true;
         }
 

@@ -13,9 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.concurrent.TimeUnit;
 
 public class NfcWriteFragment extends DialogFragment { //Write Fragment starts up if Write to NFC button is pressed
 
@@ -26,7 +28,7 @@ public class NfcWriteFragment extends DialogFragment { //Write Fragment starts u
         return new NfcWriteFragment();
     }
 
-    private TextView mTvMessage; //textview for displaying messages in the box
+    public static TextView mTvMessage; //textview for displaying messages in the box
     private Listener mListener; // generates Listener for nfc
 
     @Nullable
@@ -68,15 +70,17 @@ public class NfcWriteFragment extends DialogFragment { //Write Fragment starts u
             try {
                 ndef.connect(); //try to connect to card
                 NdefRecord mimeRecord = NdefRecord.createMime("text/plain", message.getBytes(Charset.forName("US-ASCII"))); //create record to store on card
-                ndef.writeNdefMessage(new NdefMessage(mimeRecord)); //store the rcord of the message on the card
+                ndef.writeNdefMessage(new NdefMessage(mimeRecord)); //store the record of the message on the card
                 ndef.close(); //close connection
-                mTvMessage.setText(getString(R.string.message_write_success));  //let user know Write was Successful
+                dismiss();
+                Toast.makeText(getActivity(), getString(R.string.message_write_success) , Toast.LENGTH_LONG).show();
 
             } catch (IOException | FormatException e) { // if the connection doesn't succeed
                 e.printStackTrace(); //print stack trace
                 mTvMessage.setText(getString(R.string.message_write_error)); //let user know an error has occurred
 
             }
+
 
         }
     }

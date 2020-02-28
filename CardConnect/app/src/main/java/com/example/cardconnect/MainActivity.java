@@ -3,15 +3,21 @@
 package com.example.cardconnect;
 
 
+import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.database.CursorIndexOutOfBoundsException;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.Ndef;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -52,6 +58,13 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
         setSupportActionBar(myToolbar);
 
 
+        int MyVersion = Build.VERSION.SDK_INT; //get the api version of the phone
+        if (MyVersion > Build.VERSION_CODES.LOLLIPOP_MR1) { //if the api > 21, where developers now have to ask for permission
+            if (!checkIfAlreadyhavePermission()) { //if we don't have permission
+                requestForSpecificPermission(); //request permission
+            }
+        }
+
         initViews(); //start the the other app functions
         initNFC(); //start the nfc detection
     }
@@ -67,7 +80,8 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
         int id = item.getItemId();
 
         if (id == R.id.action_favorite) { //if manual is clicked, the manual page will appear
-            Toast.makeText(MainActivity.this, "Manual clicked", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, Manual.class);
+            startActivity(intent);
             return true;
         }
 
@@ -97,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this); // initialises the nfc adapter
         if(mNfcAdapter == null){ //if nfc is not present(off or not on the device
-            //Toast.makeText(MainActivity.this, "Please enable NFC on your device.", Toast.LENGTH_LONG).show();
             return;
         }
         mPendingIntent = PendingIntent.getActivity(
@@ -214,9 +227,13 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
             if (isDialogDisplayed) { //if the dialog box is present
 
                 if (isWrite) { //if we are writing
-                    String messageToWrite = appDb.getExportData("0"); //export the profile data
-                    mNfcWriteFragment = (NfcWriteFragment) getFragmentManager().findFragmentByTag(NfcWriteFragment.TAG); // get the nfc write fragment
-                    mNfcWriteFragment.onNfcDetected(ndef,messageToWrite); //write the message to the card
+                    try {
+                        String messageToWrite = appDb.getExportData("0"); //export the profile data
+                        mNfcWriteFragment = (NfcWriteFragment) getFragmentManager().findFragmentByTag(NfcWriteFragment.TAG); // get the nfc write fragment
+                        mNfcWriteFragment.onNfcDetected(ndef, messageToWrite); //write the message to the card
+                    }catch (CursorIndexOutOfBoundsException e){
+                        Toast.makeText(this, getString(R.string.profile_error), Toast.LENGTH_LONG).show(); //if the profile is not made, tell the user to make one
+                    }
 
                 } else {
 
@@ -226,4 +243,33 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
             }
         }
     }
+
+    private boolean checkIfAlreadyhavePermission() {
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION); //check permission for location
+        if (result == PackageManager.PERMISSION_GRANTED) { //if the permission is granted, return true
+            return true;
+        } else { //return false if not
+            return false;
+        }
+    }
+
+    private void requestForSpecificPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET}, 101); //request permission
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 101:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //granted
+                } else {
+                    //not granted
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
 }

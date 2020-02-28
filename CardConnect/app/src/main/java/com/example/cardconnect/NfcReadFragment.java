@@ -4,6 +4,7 @@ package com.example.cardconnect;
 
 
 import android.app.DialogFragment;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.nfc.FormatException;
@@ -18,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.IOException;
-
+import java.util.concurrent.TimeUnit;
 
 
 public class NfcReadFragment extends DialogFragment { //Read Fragment starts up when Read to NFC is pressed
@@ -83,9 +84,10 @@ public class NfcReadFragment extends DialogFragment { //Read Fragment starts up 
             Intent intent = new Intent(getActivity(), viewContacts.class); // bring us to View contact using an intent
             String id = MainActivity.appDb.findLastId(); //find the last id of the list
             intent.putExtra("MyID",id); //place id in the extras of the intent
-            startActivity(intent); //start activity
-
             ndef.close(); // close connection
+            startActivity(intent); //start activity
+            dismiss();//close dialog box
+
 
 
         } catch (IOException | FormatException | NullPointerException e) { //if a null exception occurred, like nfc not being picked up

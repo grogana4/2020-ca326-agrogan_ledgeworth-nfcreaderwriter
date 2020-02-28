@@ -2,6 +2,7 @@
 package com.example.cardconnect;
 
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.provider.ContactsContract;
+import android.provider.ContactsContract.CommonDataKinds.*;
+
+import java.util.ArrayList;
 
 
 public class viewContacts extends AppCompatActivity{ //viewContacts starts up if an entry in Contacts is pressed
@@ -48,7 +52,8 @@ public class viewContacts extends AppCompatActivity{ //viewContacts starts up if
         int id = item.getItemId();
 
         if (id == R.id.action_favorite) { //if manual is clicked, the manual page will appear
-            Toast.makeText(this, "Manual clicked", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, Manual.class);
+            startActivity(intent);
             return true;
         }
 
@@ -93,7 +98,19 @@ public class viewContacts extends AppCompatActivity{ //viewContacts starts up if
         intent.putExtra(ContactsContract.Intents.Insert.POSTAL, csv[3]);
         intent.putExtra(ContactsContract.Intents.Insert.COMPANY, csv[4]);
         intent.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, csv[5]);
-        //intent.putExtra(ContactsContract.Intents.Insert.WEBSITE, csv[6]);
+        ArrayList<ContentValues> data = new ArrayList<ContentValues>(); //use an arraylist containing content values specfically for the website
+
+        ContentValues row1 = new ContentValues(); //establish new row
+        row1.put(ContactsContract.Data.MIMETYPE, Website.CONTENT_ITEM_TYPE); //specify the type
+        row1.put(Website.URL, csv[6]); //insert the website
+        row1.put(Website.TYPE, Website.TYPE_WORK);
+
+        data.add(row1); //add it to the data entry
+
+
+        intent.putParcelableArrayListExtra(ContactsContract.Intents.Insert.DATA, data); //insert the data row in extras
+
+        //intent.putExtra(ContactsContract.Intents.Insert.DATA, csv[6]);
         intent.putExtra(ContactsContract.Intents.Insert.NOTES, csv[7]);
 
         startActivity(intent); //start the activity

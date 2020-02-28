@@ -1,7 +1,11 @@
 #Internal package file, do not edit.
-#Thu Feb 20 15:51:52 GMT 2020
+#Fri Feb 28 15:36:06 GMT 2020
+1.base=/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/transforms/dexMerger/debug/0
 0.baseType=DIRECTORY
-0.base=/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=manual.html
+0.set=ASSET
+0.base=/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/merged_assets/debug/out
+1.path=classes.dex

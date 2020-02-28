@@ -51,7 +51,7 @@ public class LocationFinder{ //Location finder starts up when reading nfc
 
             }
         timer1 = new Timer(); //initialise timer
-        timer1.schedule(new GetLastLocation(), 5000); //try to get location within the next five seconds
+        timer1.schedule(new GetLastLocation(), 10000); //try to get location within the next five seconds
         return true;
     }
 
@@ -127,7 +127,6 @@ public class LocationFinder{ //Location finder starts up when reading nfc
                 locationResult.gotLocation(net_loc);
                 return;
             }
-            locationResult.gotLocation(null);
         }
     }
 

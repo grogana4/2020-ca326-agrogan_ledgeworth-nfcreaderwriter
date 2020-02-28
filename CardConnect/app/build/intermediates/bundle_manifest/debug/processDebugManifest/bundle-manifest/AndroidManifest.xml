@@ -8,6 +8,8 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="27" />
 
+    <!-- get NFC permissions -->
+
     <uses-permission android:name="android.permission.NFC" />
 
     <uses-feature
@@ -15,14 +17,20 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.Read_CONTACTS" />
+
+    <!-- get location permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- make nfc a requirement -->
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
 
+    <!-- make the application, what is the theme, the names, the parent activity for the back button and the intent filters -->
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -77,6 +85,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".viewContacts" />
+        </activity>
+        <activity
+            android:name="com.example.cardconnect.Manual"
+            android:label="@string/manual"
+            android:parentActivityName="com.example.cardconnect.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
 
         <provider
