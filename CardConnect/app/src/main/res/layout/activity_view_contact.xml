@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/contact_info"
         android:layout_marginTop="14dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:text="@string/message_export_contact" />
 
     <Button
@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_export_contact"
         android:layout_marginTop="-48dp"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="155dp"
         android:text="@string/message_edit" />
 
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_edit"
         android:layout_marginTop="-48dp"
-        android:layout_marginLeft="270dp"
+        android:layout_marginLeft="250dp"
         android:text="@string/message_delete" />
 
     <TextView

@@ -90,9 +90,10 @@ public class NfcReadFragment extends DialogFragment { //Read Fragment starts up 
 
 
 
-        } catch (IOException | FormatException | NullPointerException e) { //if a null exception occurred, like nfc not being picked up
+        } catch (IOException | FormatException | NullPointerException | ArrayIndexOutOfBoundsException e) { //if a null exception occurred, like nfc not being picked up
             e.printStackTrace(); //print stack trace
-            Toast.makeText(getActivity(), "exception occurred", Toast.LENGTH_LONG); //let user know an error has occurred
+            dismiss(); //close dialog box
+            Toast.makeText(getActivity(), getString(R.string.message_read_error), Toast.LENGTH_LONG).show(); //let user know an error has occurred
 
         }
     }

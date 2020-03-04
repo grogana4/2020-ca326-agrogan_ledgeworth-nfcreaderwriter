@@ -10,7 +10,7 @@ import android.webkit.WebView;
 
 
 
-public class Manual  extends Activity {
+public class Manual extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) { //when the Activity starts
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class Manual  extends Activity {
 
         WebView manualView = new WebView(this);
         manualView.getSettings().setJavaScriptEnabled(true);
-        manualView.getSettings().setDisplayZoomControls(true);
+        manualView.getSettings().setBuiltInZoomControls(true);
         manualView.loadUrl("file:///android_asset/manual.html");
         setContentView(manualView);
 

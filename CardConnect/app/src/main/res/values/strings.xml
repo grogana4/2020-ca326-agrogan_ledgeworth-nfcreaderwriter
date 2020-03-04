@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">CardConnect</string>
-    <string name="message_write_error">Error Writing Message!</string>
+    <string name="message_write_error">Error Writing Message! Please try again</string>
     <string name="message_write_success">Successfully written to Tag!</string>
-    <string name="message_write_progress">Writing to Tag..</string>
     <string name="message_tag_detected">NFC Tag Detected !</string>
     <string name="message_read_tag">Read from NFC Tag</string>
+    <string name="message_read_error">Error Reading Message! Please try again.</string>
     <string name="message_write_tag">Write to NFC Tag</string>
     <string name="message_tap_tag">Tap the NFC Tag to your device!</string>
     <string name="hint_message">Message</string>
@@ -26,6 +26,8 @@
 
     <string name="profile_error">Please set up a profile first</string>
 
+    <string name="NFC_permission_error">Please enable NFC</string>
+
 
     <string name="message_export_contact">Export</string>
     <string name="message_edit">Edit</string>
@@ -36,7 +38,7 @@
 
     <string name="message_saveContact">Save Contact</string>
 
-    <string name="manual">Manual</string>
+    <string name="message_help">Help</string>
 
 
 </resources>

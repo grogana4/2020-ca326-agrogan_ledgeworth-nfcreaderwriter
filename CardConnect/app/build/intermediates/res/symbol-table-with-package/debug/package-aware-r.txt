@@ -882,6 +882,7 @@ id btn_contacts
 id btn_delete
 id btn_edit
 id btn_export_contact
+id btn_help
 id btn_profile
 id btn_read
 id btn_save
@@ -1142,6 +1143,7 @@ menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+string NFC_permission_error
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1194,7 +1196,6 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string hint_message
-string manual
 string message_ViewAll
 string message_address
 string message_contacts
@@ -1202,12 +1203,14 @@ string message_delete
 string message_edit
 string message_email
 string message_export_contact
+string message_help
 string message_name
 string message_notes
 string message_number
 string message_org
 string message_pos
 string message_profile
+string message_read_error
 string message_read_tag
 string message_save
 string message_saveContact
@@ -1217,7 +1220,6 @@ string message_tap_tag
 string message_view_contacts
 string message_website
 string message_write_error
-string message_write_progress
 string message_write_success
 string message_write_tag
 string password_toggle_content_description

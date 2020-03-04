@@ -64,7 +64,6 @@ public class NfcWriteFragment extends DialogFragment { //Write Fragment starts u
 
     private void writeToNfc(Ndef ndef, String message){
 
-        mTvMessage.setText(getString(R.string.message_write_progress)); //set text to let user know we are writing
         if (ndef != null) { // if the connection isn't null or not detected
 
             try {
@@ -77,7 +76,8 @@ public class NfcWriteFragment extends DialogFragment { //Write Fragment starts u
 
             } catch (IOException | FormatException e) { // if the connection doesn't succeed
                 e.printStackTrace(); //print stack trace
-                mTvMessage.setText(getString(R.string.message_write_error)); //let user know an error has occurred
+                Toast.makeText(getActivity(), getString(R.string.message_write_error), Toast.LENGTH_LONG).show(); //let user know an error has occurred
+                dismiss(); //close dialog box
 
             }
 

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/lukeabe/Downloads/CardConnect/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/home/lukeabe/.gradle/caches/transforms-2/files-2.1/be3e23f78f6898126acd359e4f750a51/res/values-v24/values-v24.xml",

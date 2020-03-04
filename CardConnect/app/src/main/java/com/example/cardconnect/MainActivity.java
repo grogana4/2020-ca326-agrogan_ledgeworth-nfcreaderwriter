@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
     private Button mBtRead;
     private Button Profile;
     private Button Contacts;
+    private Button Help;
     private NfcWriteFragment mNfcWriteFragment; //nfc variables made
     private NfcReadFragment mNfcReadFragment;
     public static DatabaseHelper appDb; //database variable made
@@ -95,16 +96,19 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
         mBtRead = (Button) findViewById(R.id.btn_read);
         Profile = (Button) findViewById(R.id.btn_profile);
         Contacts = (Button) findViewById(R.id.btn_contacts);
+        Help = (Button) findViewById(R.id.btn_help);
         mBtWrite.setOnClickListener(view -> showWriteFragment()); //assign buttons to functions
         mBtRead.setOnClickListener(view -> showReadFragment());
         Profile.setOnClickListener(view -> showProfileFragment());
         Contacts.setOnClickListener(view -> showContactFragment());
+        Help.setOnClickListener(view -> getHelp());
+
 
         //test database entries
-        //appDb.insertData("mike", "0831234567", "Hello@iol.ie", "123 jeff lane", "DELL", "Manager", "cardconnect.com", "He a Cool guy", "");
+        //appDb.insertData("mike", "0831234567", "", "", "", "", "", "", "");
         //appDb.insertData("luke", "0831233986", "Hey@iol.ie", "123 jeff lane", "", "", "coolmathgames.com", "support me on fortnite with my creator code /smushsmish", "");
         //appDb.insertData("Gabe Null", "0831232106778", "aManHasFallenIntoTheRiver@iol.ie", "Lego City", "", "", "", "Hey!", "");
-
+        //appDb.insertData("john","0857692831","Seraphim@iol.ie","12 Cromwellsford lane", "Verizon", "Intern", "Euclid.ie","Meeting in two weeks!","");
     }
 
     private void initNFC(){
@@ -164,6 +168,11 @@ public class MainActivity extends AppCompatActivity implements Listener{ //MainA
         }
         mNfcReadFragment.show(getFragmentManager(),NfcReadFragment.TAG); // show the dialog box
 
+    }
+
+    private void getHelp(){ //if you want help from the manual
+        Intent intent = new Intent(this, Manual.class); //start intent to go to the manual
+        startActivity(intent);
     }
 
     private void showProfileFragment() { //if the "Edit Your Profile" button is pressed

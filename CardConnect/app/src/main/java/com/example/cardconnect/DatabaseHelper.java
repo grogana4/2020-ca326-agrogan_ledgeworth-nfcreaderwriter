@@ -38,7 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{ //Database starts up with 
 
     @Override
     public void onCreate(SQLiteDatabase db) { //utilises sqlite to create a table with id as a primary key,columns, columns types and whether the entries can not be null entering the table
-        db.execSQL("create table " + TABLE_NAME + "( ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, PHONE TEXT NOT NULL, EMAIL TEXT NOT NULL, ADDRESS TEXT NOT NULL, ORGANISATION TEXT, POSITION TEXT, WEBSITE TEXT, NOTES TEXT, TIME TEXT, DATE TEXT, LOCATION TEXT) ");
+        db.execSQL("create table " + TABLE_NAME + "( ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, PHONE TEXT NOT NULL, EMAIL TEXT, ADDRESS TEXT, ORGANISATION TEXT, POSITION TEXT, WEBSITE TEXT, NOTES TEXT, TIME TEXT, DATE TEXT, LOCATION TEXT) ");
     }
 
     @Override
@@ -157,7 +157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{ //Database starts up with 
         Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ID = " + id + " AND NOT ID = 0", null); //query the contact by the specific id
         res.moveToFirst(); //move the cursor to the beginning
         StringBuffer buffer = new StringBuffer(); //create a String buffer to create text
-        String[] headings = new String[]{"Name:     ", "Phone:      ", "Email:      " , "Address:       ", "Organisation:       ", "Position:       ", "Website:        ", "Notes:      ", "Read Time:      ", "Read Date:      ", "You met this person at:     " }; //create headings for dynamic entries
+        String[] headings = new String[]{"Name: ", "Phone: ", "Email: " , "Address: ", "Organisation: ", "Position: ", "Website: ", "Notes: ", "Read Time: ", "Read Date: ", "You met this person at: " }; //create headings for dynamic entries
         if (res != null) { //if cursor is not null
 
             int i = 0;

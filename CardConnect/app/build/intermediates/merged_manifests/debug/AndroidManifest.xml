@@ -49,9 +49,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category." />
+
+                <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
         <activity
@@ -88,7 +90,7 @@
         </activity>
         <activity
             android:name="com.example.cardconnect.Manual"
-            android:label="@string/manual"
+            android:label="@string/message_help"
             android:parentActivityName="com.example.cardconnect.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

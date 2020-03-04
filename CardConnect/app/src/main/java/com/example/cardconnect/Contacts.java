@@ -57,7 +57,6 @@ public class Contacts extends AppCompatActivity{ //Contacts starts up if Contact
     public boolean onOptionsItemSelected(MenuItem item) {// Handle action bar item clicks here. this is mainly fo the options menu.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_favorite) { //if manual is clicked, the manual page will appear
             Intent intent = new Intent(this, Manual.class);
             startActivity(intent);

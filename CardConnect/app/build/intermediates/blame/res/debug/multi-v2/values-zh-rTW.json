@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lukeabe/Downloads/CardConnect/CardConnect/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "/home/lukeabe/Downloads/CardConnect/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/home/lukeabe/.gradle/caches/transforms-2/files-2.1/648dfaeace52fb17e874a10eaa3d3166/res/values-zh-rTW/values.xml",

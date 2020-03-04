@@ -74,10 +74,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="faf7ff" />
                                       <entry key="foregroundImage" value="$PROJECT_DIR$/../../../ic_nfc.png" />
-                                      <entry key="generateRoundIcon" value="false" />
-                                      <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>
