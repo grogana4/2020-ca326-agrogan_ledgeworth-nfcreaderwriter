@@ -13,11 +13,11 @@ Results for each test case are as follows.
 
 ### Testing of DataBaseHelper
 *Testing Database insert*
-![](./images/db-1.png)
+<img src=./images/db_1.jpg/> 
 *Testing Database delete*
-![](./images/db-2.png)
+<img src=./images/db_2.jpg/>
 *Testing Database update*
-![](./images/db-3.png)
+<img src=./images/db_3.jpg/>
 
 All tests ran with expected results
 
@@ -25,18 +25,18 @@ We also ran stress tests for the database itself on both an emulated  Google Pix
 
 #### Stress test
 **emulation - Google Pixel 2**
-2000 entries - 18.33s
-1000 entries - 4.64s
-500 entries - 2.83s
-100 entries - 1.0s
+2000 entries - 18.33s |
+1000 entries - 4.64s |
+500 entries - 2.83s |
+100 entries - 1.0s |
 0 entries - instantaneous
 
 **Real phone -Huawei p8 lite 2017**
-2000 entries - 10.23s
-1000 entries - 3.90s
-500 entries - 3.27s
-100 entries - 1.06s
-0 entries - 0.57s
+2000 entries - 10.23s |
+1000 entries - 3.90s |
+500 entries - 3.27s |
+100 entries - 1.06s |
+0 entries - 0.57s 
 
 
 
@@ -73,12 +73,12 @@ Huawei honor 10 <br/>
 <img src=./images/honor10_6.jpg width="150">
 
  Google Pixel 2 <br/>
-<img src=./images/pixel2_1.jpg width="150"> 
-<img src=./images/pixel2_2.jpg width="150"> 
-<img src=./images/pixel2_3.jpg width="150"> 
-<img src=./images/pixel2_4.jpg width="150"> 
-<img src=./images/pixel2_5.jpg width="150">
-<img src=./images/pixel2_6.jpg width="150">
+<img src=./images/pixel2_1.png width="150"> 
+<img src=./images/pixel2_2.png width="150"> 
+<img src=./images/pixel2_3.png width="150"> 
+<img src=./images/pixel2_4.png width="150"> 
+<img src=./images/pixel2_5.png width="150">
+<img src=./images/pixel2_6.png width="150">
 
 We also ensured to handle all possible errors. For example, when given an invalid information in the NFC Card (anything other than text or not in our specific format), the app prints an appropriate toast message.
 
