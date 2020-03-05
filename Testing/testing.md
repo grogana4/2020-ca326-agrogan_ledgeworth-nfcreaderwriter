@@ -13,11 +13,11 @@ Results for each test case are as follows.
 
 ### Testing of DataBaseHelper
 *Testing Database insert*
-<img src=./images/db_1.jpg/> 
+<img src=./images/db_1.png/> 
 *Testing Database delete*
-<img src=./images/db_2.jpg/>
+<img src=./images/db_2.png/>
 *Testing Database update*
-<img src=./images/db_3.jpg/>
+<img src=./images/db_3.png/>
 
 All tests ran with expected results
 
