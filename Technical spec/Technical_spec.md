@@ -61,6 +61,10 @@ Contrary to our functional spec’s vision, most of our classes are highly coupl
 The NFC and GUI fragments both require queries from and to the database for most of their functionality to be fulfilled, the NFC fragments require the ability to read the users profile data from, and write the users profile data to the database. The user’s ability to edit data starts from the editContact class, which displays the current data stored in the database, and upon editing will require writing to the database. For the scope of this app however, the tight coupling presents minimal problems for the user and simplified our app development.
 
 
+
+
+
+
 ![](./Sys_architecture.png)
 
 
